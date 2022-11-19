@@ -2,6 +2,7 @@ package com.example.tacocloud.entity;
 
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,6 +18,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "tacos")
+@RestResource(rel = "tacos", path = "tacos")
 public class Taco {
 
     @Id
